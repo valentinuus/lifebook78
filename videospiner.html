@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title></title>
+    <title>Видеоспинер</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/Bebas-Neue-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" href="img/favicons/favicon.ico" sizes="any">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -24,9 +29,13 @@
                 <li class="menu__item">
                   <button class="menu__link menu__link_btn">Услуги</button><span class="menu__arrow"></span>
                   <ul class="menu__sub-list">
-                    <li><a class="menu__sub-link" href="videospiner.html">Видеоспинер</a></li>
-                    <li><a class="menu__sub-link" href="fotobudka.html">Фотобудка</a></li>
                     <li><a class="menu__sub-link" href="flipbook.html">Флипбук студия</a></li>
+                    <li><a class="menu__sub-link" href="videospiner.html">Видеоспинер</a></li>
+                    <li><a class="menu__sub-link" href="flipbook.html">Виртуальная реальность</a></li>
+                    <li><a class="menu__sub-link" href="videospiner.html">Фотобудка</a></li>
+                    <li><a class="menu__sub-link" href="fotobudka.html">Фотостудия с печатью</a></li>
+                    <li><a class="menu__sub-link" href="flipbook.html">Фотозона хромакей</a></li>
+                    <li><a class="menu__sub-link" href="flipbook.html">Фото/видеозона «неоновый тоннель»</a></li>
                   </ul>
                 </li>
                 <li><a class="menu__link" href="portfolio.html">Галерея</a></li>
@@ -53,7 +62,7 @@
             <div class="intro__data">
               <h1 class="title_h1">видеоспинер</h1>
               <div class="intro__text">«Видеоспиннер 360» – интерактивная зона для съемки роликов с эффектами «Slow Mo», автоматическим брендированием по ТЗ заказчика и наложением музыки.</div>
-              <div class="intro__btn">Заказать</div>
+              <button class="slid__btn intro__btn" data-path="popup-service">Заказать</button>
             </div>
           </div>
         </sectio>
@@ -381,14 +390,86 @@
                   <li class="checklist__item">Отчет по e-mail адресам</li>
                   <li class="checklist__item">Кольцевой видеосвет</li>
                 </ul>
-                <button class="checklist__btn">Заказать</button>
+                <button class="slid__btn intro__btn" data-path="popup-service-prise">Заказать</button>
               </div>
             </div>
           </div>
         </section>
         <section class="work">
           <h4 class="title_h4 _container">Пример работы</h4>
-          <div class="work__wrap"> </div>
+          <div class="work__wrap"> 
+            <div class="work__slider"> 
+              <div class="work__slider-wrapper"> 
+                <div class="work__slid">
+                  <picture class="picture">
+                    <source srcset="img/fotobudka-01.avif" type="image/avif"/>
+                    <source srcset="img/fotobudka-01.webp" type="image/webp"/>
+                    <source srcset="img/fotobudka-01.jpg" type="image/jpg"/><img src="img/fotobudka-01.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="work__slid">
+                  <picture class="picture">
+                    <source srcset="img/fotobudka-02.avif" type="image/avif"/>
+                    <source srcset="img/fotobudka-02.webp" type="image/webp"/>
+                    <source srcset="img/fotobudka-02.jpg" type="image/jpg"/><img src="img/fotobudka-02.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="work__slid">
+                  <picture class="picture">
+                    <source srcset="img/fotobudka-03.avif" type="image/avif"/>
+                    <source srcset="img/fotobudka-03.webp" type="image/webp"/>
+                    <source srcset="img/fotobudka-03.jpg" type="image/jpg"/><img src="img/fotobudka-03.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="work__slid">
+                  <picture class="picture">
+                    <source srcset="img/fotobudka-04.avif" type="image/avif"/>
+                    <source srcset="img/fotobudka-04.webp" type="image/webp"/>
+                    <source srcset="img/fotobudka-04.jpg" type="image/jpg"/><img src="img/fotobudka-04.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="work__slid">
+                  <picture class="picture">
+                    <source srcset="img/fotobudka-05.avif" type="image/avif"/>
+                    <source srcset="img/fotobudka-05.webp" type="image/webp"/>
+                    <source srcset="img/fotobudka-05.jpg" type="image/jpg"/><img src="img/fotobudka-05.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="work__slid">
+                  <picture class="picture">
+                    <source srcset="img/fotobudka-01.avif" type="image/avif"/>
+                    <source srcset="img/fotobudka-01.webp" type="image/webp"/>
+                    <source srcset="img/fotobudka-01.jpg" type="image/jpg"/><img src="img/fotobudka-01.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="work__slid">
+                  <picture class="picture">
+                    <source srcset="img/fotobudka-02.avif" type="image/avif"/>
+                    <source srcset="img/fotobudka-02.webp" type="image/webp"/>
+                    <source srcset="img/fotobudka-02.jpg" type="image/jpg"/><img src="img/fotobudka-02.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="work__slid">
+                  <picture class="picture">
+                    <source srcset="img/fotobudka-03.avif" type="image/avif"/>
+                    <source srcset="img/fotobudka-03.webp" type="image/webp"/>
+                    <source srcset="img/fotobudka-03.jpg" type="image/jpg"/><img src="img/fotobudka-03.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="work__slid">
+                  <picture class="picture">
+                    <source srcset="img/fotobudka-04.avif" type="image/avif"/>
+                    <source srcset="img/fotobudka-04.webp" type="image/webp"/>
+                    <source srcset="img/fotobudka-04.jpg" type="image/jpg"/><img src="img/fotobudka-04.jpg" alt=""/>
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="work-slider-buttons">
+              <div class="work-slider-pagination"></div>
+              <div class="work-slider-button-next"></div>
+            </div>
+          </div>
           <div class="work__video _container">
             <div class="video"><a class="video__link" href="https://www.youtube.com/watch?v=GMRCeCaIcYg">
                 <picture>
@@ -411,7 +492,7 @@
               </button>
             </div>
           </div>
-          <div class="work__btn"><a class="btn" href="galereya.html">посмотреть всё</a></div>
+          <div class="work__btn"><a class="btn" href="portfolio.html">посмотреть всё</a></div>
         </section>
         <section class="services services-mt">
           <div class="services__wrap _container">
@@ -474,20 +555,58 @@
         </section>
         <section class="form-section">
           <div class="form-wrap _container">
-            <h4 class="title_h4">ЗАКАЖИТЕ КОНСУЛЬТАЦИЮ НАШЕГО СПЕЦИАЛИСТА <span>Оставьте заявку прямо сейчас</span></h4>
-            <form class="form" action="mail.php" enctype="multipart/form-data" method="POST">
-              <input type="hidden" name="admin_email[]" value="!!!!!!почта!!!!!!">
-              <input type="hidden" name="form_subject" value="Тема письма">
-              <label class="form-label">
-                <input type="text" name="name" placeholder="Ваше имя">
+            <h4 class="title_h4">свяжитесь с нами любым удобным способом</h4>
+            <form class="form form-page" id="form-main" action="#" method="POST" enctype="multipart/form-data">
+              <label class="form__label form-page__form-label">
+                <input class="input input-name" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
               </label>
-              <label class="form-label">
-                <input type="tel" data-validate-field="tel" name="tel" placeholder="Телефон*">
+              <label class="form__label form-page__form-label">
+                <input class="input input-tel" id="tel" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
               </label>
-              <button class="form-btn" type="submit">Заказать консультацию</button>
+              <button class="button form-page__form-btn">Заказать консультацию</button>
             </form>
           </div>
         </section>
+        <div class="modals">
+          <div class="modal-overlay">
+            <div class="modal modal--1" data-target="popup-service"> 
+              <div class="form-modal__wrap">
+                <div class="form-wrap _container">
+                  <h4 class="title_h4">Закажи видеоспинер <span>Оставьте заявку прямо сейчас</span></h4>
+                  <div class="form-modal__wrap">
+                    <form class="form form-modal__form" id="form-service" action="#" method="POST" enctype="multipart/form-data">
+                      <label class="form__label form-modal__label">
+                        <input class="input input-name input-name-service" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
+                      </label>
+                      <label class="form__label form-modal__label">
+                        <input class="input input-tel input-tel-service" id="tel-service" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
+                      </label>
+                      <button class="button form-modal__btn">Заказать консультацию</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal modal--1" data-target="popup-service-prise"> 
+              <div class="form-modal__wrap">
+                <div class="form-wrap _container">
+                  <h4 class="title_h4">Закажи видеоспинер <span>Оставьте заявку прямо сейчас</span></h4>
+                  <div class="form-modal__wrap">
+                    <form class="form form-modal__form" id="form-service-prise" action="#" method="POST" enctype="multipart/form-data">
+                      <label class="form__label form-modal__label">
+                        <input class="input input-name input-name-service-prise" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
+                      </label>
+                      <label class="form__label form-modal__label">
+                        <input class="input input-tel input-tel-service-prise" id="tel-service-prise" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
+                      </label>
+                      <button class="button form-modal__btn">Заказать консультацию</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="footer">
         <div class="footer__wrap _container">
@@ -513,8 +632,14 @@
       </footer>
     </div>
     <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/libs/just-validate.min.js"></script>
+    <script src="js/libs/inputmask.min.js"></script>
+    <script src="js/slider-type.min.js"></script>
+    <script src="js/modal.min.js"></script>
     <script src="js/tabs.min.js"></script>
     <script src="js/video.min.js"></script>
+    <script src="js/form-type.min.js"></script>
+    <script src="js/form.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

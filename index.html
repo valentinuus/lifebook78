@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>1111</title>
+    <title>Главная</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/Bebas-Neue-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" href="img/favicons/favicon.ico" sizes="any">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -24,9 +29,13 @@
                 <li class="menu__item">
                   <button class="menu__link menu__link_btn">Услуги</button><span class="menu__arrow"></span>
                   <ul class="menu__sub-list">
-                    <li><a class="menu__sub-link" href="videospiner.html">Видеоспинер</a></li>
-                    <li><a class="menu__sub-link" href="fotobudka.html">Фотобудка</a></li>
                     <li><a class="menu__sub-link" href="flipbook.html">Флипбук студия</a></li>
+                    <li><a class="menu__sub-link" href="videospiner.html">Видеоспинер</a></li>
+                    <li><a class="menu__sub-link" href="flipbook.html">Виртуальная реальность</a></li>
+                    <li><a class="menu__sub-link" href="videospiner.html">Фотобудка</a></li>
+                    <li><a class="menu__sub-link" href="fotobudka.html">Фотостудия с печатью</a></li>
+                    <li><a class="menu__sub-link" href="flipbook.html">Фотозона хромакей</a></li>
+                    <li><a class="menu__sub-link" href="flipbook.html">Фото/видеозона «неоновый тоннель»</a></li>
                   </ul>
                 </li>
                 <li><a class="menu__link" href="portfolio.html">Галерея</a></li>
@@ -46,10 +55,12 @@
             <div class="slider__wrapper">
               <div class="slid">
                 <div class="slid__img"> 
-                  <picture class="picture">
-                    <source srcset="img/slid_01.avif" type="image/avif"/>
-                    <source srcset="img/slid_01.webp" type="image/webp"/>
-                    <source srcset="img/slid_01.jpg" type="image/jpg"/><img src="img/slid_01.jpg" alt="Флипбук студия"/>
+                  <picture>
+                    <source srcset="img/main-slider/videospiner-sm.avif" media="(max-width: 640px)">
+                    <source srcset="img/main-slider/videospiner-sm.webp" media="(max-width: 640px)">
+                    <source srcset="img/main-slider/videospiner-sm.jpg" media="(max-width: 640px)">
+                    <source type="image/avif" srcset="img/main-slider/videospiner.avif 1x, img/main-slider/videospiner@2x.avif 2x, img/main-slider/videospiner@3x.avif 3x">
+                    <source type="image/webp" srcset="img/main-slider/videospiner.webp 1x, img/main-slider/videospiner@2x.webp 2x, img/main-slider/videospiner@3x.webp 3x"><img src="img/main-slider/videospiner.jpg" srcset="img/main-slider/videospiner@2x.jpg 2x, img/main-slider/videospiner@3x.jpg 3x" alt="description" loading="lazy">
                   </picture>
                 </div>
                 <div class="slid__text">
@@ -258,7 +269,7 @@
               <li class="advantages__item">
                 <div class="advantages__img"> <img src="img/icons/experience.svg" alt="иконка"></div>
                 <div class="advantages__title">большой опыт работы</div>
-                <div class="advantages__descr">За 7 лет отработали более чем на 600 мероприятиях. Сделали более 20 000 флипбуков. Напечатали более 25 000 фотографий. Сняли более 1 Терабайта видеороликов.</div>
+                <div class="advantages__descr">За 11 лет отработали более чем на 600 мероприятиях. Сделали более 20 000 флипбуков. Напечатали более 25 000 фотографий. Сняли более 1 Терабайта видеороликов.</div>
               </li>
               <li class="advantages__item">
                 <div class="advantages__img"> <img src="img/icons/recommend.svg" alt="иконка"></div>
@@ -268,16 +279,16 @@
               <li class="advantages__item">
                 <div class="advantages__img"> <img src="img/icons/choice.svg" alt="иконка"></div>
                 <div class="advantages__title">есть из чего выбрать</div>
-                <div class="advantages__descr">У нас 8 различных зон активности, предложим вариант или комбинацию под ваш бюджет.</div>
+                <div class="advantages__descr">У нас разнообразный ассортимент самых популярных интерактивных зон для мероприятий, подберем подходящую зону или связку интерактивов под ваш формат и бюджет.</div>
               </li>
             </ul>
           </div>
         </section>
         <section class="reviews">
-          <div class="reviews__wrap _container">
+          <div class="reviews__wrap">
             <h4 class="title_h4">отзывы клиентов</h4>
-            <div class="reviews__slider">
-              <div class="reviews__slider__wrap">
+            <div class="reviews-slider">
+              <div class="reviews-slider__wrap">
                 <div class="slid-reviews">
                   <div class="slid-reviews__person">
                     <div class="slid-reviews__img">
@@ -289,9 +300,78 @@
                     </div>
                     <div class="slid-reviews__name">Юлия Натынчик</div>
                   </div>
-                  <div class="slid-reviews__descr">Мы заказывали флипбуки в качестве пригласительных на свадьбу. Сам процесс подготовки и съемки очень веселый и увлекательный :) можно сделать флипбук таким, каким его хочешь видеть ты: и обложку, и текст, и сюжет. Очень приятно видеть реакцию гостей на такие приглашения.Спасибо Петру и его команде за помощь в подготовке к нашей свадьбе!</div>
+                  <div class="slid-reviews__descr">Мы заказывали флипбуки в качестве пригласительных на свадьбу. Сам процесс подготовки и съемки очень веселый и увлекательный:) можно сделать флипбук таким, каким его хочешь видеть ты: и обложку, и текст, и сюжет. Очень приятно видеть реакцию гостей на такие приглашения. Спасибо Петру и его команде за помощь в подготовке к нашей свадьбе!</div>
+                </div>
+                <div class="slid-reviews">
+                  <div class="slid-reviews__person">
+                    <div class="slid-reviews__img">
+                      <picture class="picture">
+                        <source srcset="img/persone-01.avif" type="image/avif"/>
+                        <source srcset="img/persone-01.webp" type="image/webp"/>
+                        <source srcset="img/persone-01.jpg" type="image/jpg"/><img src="img/persone-01.jpg" alt="клиент"/>
+                      </picture>
+                    </div>
+                    <div class="slid-reviews__name">Анна Колесникова</div>
+                  </div>
+                  <div class="slid-reviews__descr">На прошлой неделе отметили День рождения мужа. В качестве подарка решили сделать ему флипбук. Сюрприз удался!!! Необычная «книжечка» удивила и порадовала!!! Это не простая фотография и даже не простой фотоальбом. Это «оживавшая» фотография, которая, благодаря своим небольшим размерам, теперь будет постоянно с нашим папой!</div>
+                </div>
+                <div class="slid-reviews">
+                  <div class="slid-reviews__person">
+                    <div class="slid-reviews__img">
+                      <picture class="picture">
+                        <source srcset="img/persone-01.avif" type="image/avif"/>
+                        <source srcset="img/persone-01.webp" type="image/webp"/>
+                        <source srcset="img/persone-01.jpg" type="image/jpg"/><img src="img/persone-01.jpg" alt="клиент"/>
+                      </picture>
+                    </div>
+                    <div class="slid-reviews__name">Аня Петрова</div>
+                  </div>
+                  <div class="slid-reviews__descr">Увидели впервые флипбуки на свадебной выставке в Азимуте и сразу загорелись идеей приглашений на свадьбу! С ребятами приятно иметь дело!👍 Сделали все качественно и быстро! При съемке флипбука нас никто не торопил, было сделано несколько дублей, прежде чем добились самого лучшего результата! Петр постоянно отвечал на все вопросы по оформлению!</div>
+                </div>
+                <div class="slid-reviews">
+                  <div class="slid-reviews__person">
+                    <div class="slid-reviews__img">
+                      <picture class="picture">
+                        <source srcset="img/persone-01.avif" type="image/avif"/>
+                        <source srcset="img/persone-01.webp" type="image/webp"/>
+                        <source srcset="img/persone-01.jpg" type="image/jpg"/><img src="img/persone-01.jpg" alt="клиент"/>
+                      </picture>
+                    </div>
+                    <div class="slid-reviews__name">Temp Temp</div>
+                  </div>
+                  <div class="slid-reviews__descr">Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp Temp </div>
+                </div>
+                <div class="slid-reviews">
+                  <div class="slid-reviews__person">
+                    <div class="slid-reviews__img">
+                      <picture class="picture">
+                        <source srcset="img/persone-01.avif" type="image/avif"/>
+                        <source srcset="img/persone-01.webp" type="image/webp"/>
+                        <source srcset="img/persone-01.jpg" type="image/jpg"/><img src="img/persone-01.jpg" alt="клиент"/>
+                      </picture>
+                    </div>
+                    <div class="slid-reviews__name">Temp 1 Temp 1 </div>
+                  </div>
+                  <div class="slid-reviews__descr">Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 Temp 1 </div>
+                </div>
+                <div class="slid-reviews">
+                  <div class="slid-reviews__person">
+                    <div class="slid-reviews__img">
+                      <picture class="picture">
+                        <source srcset="img/persone-01.avif" type="image/avif"/>
+                        <source srcset="img/persone-01.webp" type="image/webp"/>
+                        <source srcset="img/persone-01.jpg" type="image/jpg"/><img src="img/persone-01.jpg" alt="клиент"/>
+                      </picture>
+                    </div>
+                    <div class="slid-reviews__name">Temp 2 Temp 2 </div>
+                  </div>
+                  <div class="slid-reviews__descr">Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 Temp 2 </div>
                 </div>
               </div>
+            </div>
+            <div class="reviews-slider-buttons">
+              <div class="reviews-slider-pagination"></div>
+              <div class="reviews-slider-button-next"></div>
             </div>
           </div>
         </section>
@@ -337,103 +417,17 @@
             </ul>
           </div>
         </section>
-        <section class="cases"> 
-          <div class="cases__wrap _container">
-            <h4 class="title_h4">пример работы</h4>
-            <div class="cases__slider-wrap">
-              <div class="cases__slider">
-                <div class="case">
-                  <div class="case__wrapper">
-                    <div class="case__slide">
-                      <picture class="picture">
-                        <source srcset="img/fotobudka-01.avif" type="image/avif"/>
-                        <source srcset="img/fotobudka-01.webp" type="image/webp"/>
-                        <source srcset="img/fotobudka-01.jpg" type="image/jpg"/><img src="img/fotobudka-01.jpg" alt="фотобудка"/>
-                      </picture>
-                    </div>
-                    <div class="case__slide">
-                      <picture class="picture">
-                        <source srcset="img/fotobudka-02.avif" type="image/avif"/>
-                        <source srcset="img/fotobudka-02.webp" type="image/webp"/>
-                        <source srcset="img/fotobudka-02.jpg" type="image/jpg"/><img src="img/fotobudka-02.jpg" alt="фотобудка"/>
-                      </picture>
-                    </div>
-                    <div class="case__slide">
-                      <picture class="picture">
-                        <source srcset="img/fotobudka-03.avif" type="image/avif"/>
-                        <source srcset="img/fotobudka-03.webp" type="image/webp"/>
-                        <source srcset="img/fotobudka-03.jpg" type="image/jpg"/><img src="img/fotobudka-03.jpg" alt="фотобудка"/>
-                      </picture>
-                    </div>
-                    <div class="case__slide">
-                      <picture class="picture">
-                        <source srcset="img/fotobudka-03.avif" type="image/avif"/>
-                        <source srcset="img/fotobudka-03.webp" type="image/webp"/>
-                        <source srcset="img/fotobudka-03.jpg" type="image/jpg"/><img src="img/fotobudka-03.jpg" alt="фотобудка"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="cases__info">
-                <div class="info"> 
-                  <div class="info__title">«Локомотив»</div>
-                  <div class="info__item">Мероприятие: «День рождения клуба»</div>
-                  <div class="info__item">Услуга: Брендированная Фотобудка</div>
-                  <div class="info__item">Место: Возили фотобудку в Москву</div>
-                </div>
-              </div>
-            </div>
-            <div class="cases__slider-preview">
-              <div class="preview">
-                <div class="preview__wrapper">
-                  <div class="preview__slide">
-                    <picture class="picture">
-                      <source srcset="img/fotobudka-01.avif" type="image/avif"/>
-                      <source srcset="img/fotobudka-01.webp" type="image/webp"/>
-                      <source srcset="img/fotobudka-01.jpg" type="image/jpg"/><img src="img/fotobudka-01.jpg" alt="фотобудка"/>
-                    </picture>
-                  </div>
-                  <div class="preview__slide">
-                    <picture class="picture">
-                      <source srcset="img/fotobudka-02.avif" type="image/avif"/>
-                      <source srcset="img/fotobudka-02.webp" type="image/webp"/>
-                      <source srcset="img/fotobudka-02.jpg" type="image/jpg"/><img src="img/fotobudka-02.jpg" alt="фотобудка"/>
-                    </picture>
-                  </div>
-                  <div class="preview__slide">
-                    <picture class="picture">
-                      <source srcset="img/fotobudka-03.avif" type="image/avif"/>
-                      <source srcset="img/fotobudka-03.webp" type="image/webp"/>
-                      <source srcset="img/fotobudka-03.jpg" type="image/jpg"/><img src="img/fotobudka-03.jpg" alt="фотобудка"/>
-                    </picture>
-                  </div>
-                  <div class="preview__slide">
-                    <picture class="picture">
-                      <source srcset="img/fotobudka-04.avif" type="image/avif"/>
-                      <source srcset="img/fotobudka-04.webp" type="image/webp"/>
-                      <source srcset="img/fotobudka-04.jpg" type="image/jpg"/><img src="img/fotobudka-04.jpg" alt="фотобудка"/>
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cases__btn"><a class="btn" href="#">посмотреть все</a></div>
-          </div>
-        </section>
         <section class="form-section">
           <div class="form-wrap _container">
-            <h4 class="title_h4">ЗАКАЖИТЕ КОНСУЛЬТАЦИЮ НАШЕГО СПЕЦИАЛИСТА <span>Оставьте заявку прямо сейчас</span></h4>
-            <form class="form" action="mail.php" enctype="multipart/form-data" method="POST">
-              <input type="hidden" name="admin_email[]" value="!!!!!!почта!!!!!!">
-              <input type="hidden" name="form_subject" value="Тема письма">
-              <label class="form-label">
-                <input type="text" name="name" placeholder="Ваше имя">
+            <h4 class="title_h4">свяжитесь с нами любым удобным способом</h4>
+            <form class="form form-page" id="form-main" action="#" method="POST" enctype="multipart/form-data">
+              <label class="form__label form-page__form-label">
+                <input class="input input-name" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
               </label>
-              <label class="form-label">
-                <input type="tel" data-validate-field="tel" name="tel" placeholder="Телефон*">
+              <label class="form__label form-page__form-label">
+                <input class="input input-tel" id="tel" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
               </label>
-              <button class="form-btn" type="submit">Заказать консультацию</button>
+              <button class="button form-page__form-btn">Заказать консультацию</button>
             </form>
           </div>
         </section>
@@ -443,16 +437,14 @@
               <div class="form-modal">
                 <div class="form-modal__title">Заголовок1<span>Оставьте заявку прямо сейчас</span></div>
                 <div class="form-modal__wrap">
-                  <form class="form-modal__form" action="mail.php" enctype="multipart/form-data" method="POST">
-                    <input type="hidden" name="admin_email[]" value="!!!!!!почта!!!!!!">
-                    <input type="hidden" name="form_subject" value="Тема письма">
-                    <label class="form-modal__label">
-                      <input type="text" name="name" placeholder="Ваше имя">
+                  <form class="form form-1 form-modal__form" id="form-slid-1" action="#" method="POST" enctype="multipart/form-data">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-name input-name-slid-1" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
                     </label>
-                    <label class="form-modal__label">
-                      <input type="tel" data-validate-field="tel" name="tel" placeholder="Телефон*">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-tel input-tel-slid-1" id="tel-1" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
                     </label>
-                    <button class="form-modal__btn" type="submit">Заказать консультацию</button>
+                    <button class="button form-modal__btn">Заказать консультацию</button>
                   </form>
                 </div>
               </div>
@@ -461,16 +453,14 @@
               <div class="form-modal">
                 <div class="form-modal__title">Заголовок2<span>Оставьте заявку прямо сейчас</span></div>
                 <div class="form-modal__wrap">
-                  <form class="form-modal__form" action="mail.php" enctype="multipart/form-data" method="POST">
-                    <input type="hidden" name="admin_email[]" value="!!!!!!почта!!!!!!">
-                    <input type="hidden" name="form_subject" value="Тема письма">
-                    <label class="form-modal__label">
-                      <input type="text" name="name" placeholder="Ваше имя">
+                  <form class="form form-2 form-modal__form" id="form-slid-2" action="#" method="POST" enctype="multipart/form-data">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-name input-name-slid-2" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
                     </label>
-                    <label class="form-modal__label">
-                      <input type="tel" data-validate-field="tel" name="tel" placeholder="Телефон*">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-tel input-tel-slid-2" id="tel-2" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
                     </label>
-                    <button class="form-modal__btn" type="submit">Заказать консультацию</button>
+                    <button class="button form-modal__btn">Заказать консультацию</button>
                   </form>
                 </div>
               </div>
@@ -479,16 +469,14 @@
               <div class="form-modal">
                 <div class="form-modal__title">Заголовок3<span>Оставьте заявку прямо сейчас</span></div>
                 <div class="form-modal__wrap">
-                  <form class="form-modal__form" action="mail.php" enctype="multipart/form-data" method="POST">
-                    <input type="hidden" name="admin_email[]" value="!!!!!!почта!!!!!!">
-                    <input type="hidden" name="form_subject" value="Тема письма">
-                    <label class="form-modal__label">
-                      <input type="text" name="name" placeholder="Ваше имя">
+                  <form class="form form-3 form-modal__form" id="form-slid-3" action="#" method="POST" enctype="multipart/form-data">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-name input-name-slid-3" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
                     </label>
-                    <label class="form-modal__label">
-                      <input type="tel" data-validate-field="tel" name="tel" placeholder="Телефон*">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-tel input-tel-slid-3" id="tel-3" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
                     </label>
-                    <button class="form-modal__btn" type="submit">Заказать консультацию</button>
+                    <button class="button form-modal__btn">Заказать консультацию</button>
                   </form>
                 </div>
               </div>
@@ -497,16 +485,14 @@
               <div class="form-modal">
                 <div class="form-modal__title">Заголовок4<span>Оставьте заявку прямо сейчас</span></div>
                 <div class="form-modal__wrap">
-                  <form class="form-modal__form" action="mail.php" enctype="multipart/form-data" method="POST">
-                    <input type="hidden" name="admin_email[]" value="!!!!!!почта!!!!!!">
-                    <input type="hidden" name="form_subject" value="Тема письма">
-                    <label class="form-modal__label">
-                      <input type="text" name="name" placeholder="Ваше имя">
+                  <form class="form form-4 form-modal__form" id="form-slid-4" action="#" method="POST" enctype="multipart/form-data">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-name input-name-slid-4" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
                     </label>
-                    <label class="form-modal__label">
-                      <input type="tel" data-validate-field="tel" name="tel" placeholder="Телефон*">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-tel input-tel-slid-4" id="tel-4" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
                     </label>
-                    <button class="form-modal__btn" type="submit">Заказать консультацию</button>
+                    <button class="button form-modal__btn">Заказать консультацию</button>
                   </form>
                 </div>
               </div>
@@ -515,16 +501,14 @@
               <div class="form-modal">
                 <div class="form-modal__title">Заголовок5<span>Оставьте заявку прямо сейчас</span></div>
                 <div class="form-modal__wrap">
-                  <form class="form-modal__form" action="mail.php" enctype="multipart/form-data" method="POST">
-                    <input type="hidden" name="admin_email[]" value="!!!!!!почта!!!!!!">
-                    <input type="hidden" name="form_subject" value="Тема письма">
-                    <label class="form-modal__label">
-                      <input type="text" name="name" placeholder="Ваше имя">
+                  <form class="form form-5 form-modal__form" id="form-slid-5" action="#" method="POST" enctype="multipart/form-data">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-name input-name-slid-5" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
                     </label>
-                    <label class="form-modal__label">
-                      <input type="tel" data-validate-field="tel" name="tel" placeholder="Телефон*">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-tel input-tel-slid-5" id="tel-5" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
                     </label>
-                    <button class="form-modal__btn" type="submit">Заказать консультацию</button>
+                    <button class="button form-modal__btn">Заказать консультацию</button>
                   </form>
                 </div>
               </div>
@@ -533,16 +517,14 @@
               <div class="form-modal">
                 <div class="form-modal__title">Заголовок6<span>Оставьте заявку прямо сейчас</span></div>
                 <div class="form-modal__wrap">
-                  <form class="form-modal__form" action="mail.php" enctype="multipart/form-data" method="POST">
-                    <input type="hidden" name="admin_email[]" value="!!!!!!почта!!!!!!">
-                    <input type="hidden" name="form_subject" value="Тема письма">
-                    <label class="form-modal__label">
-                      <input type="text" name="name" placeholder="Ваше имя">
+                  <form class="form form-6 form-modal__form" id="form-slid-6" action="#" method="POST" enctype="multipart/form-data">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-name input-name-slid-6" type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя">
                     </label>
-                    <label class="form-modal__label">
-                      <input type="tel" data-validate-field="tel" name="tel" placeholder="Телефон*">
+                    <label class="form__label form-modal__label">
+                      <input class="input input-tel input-tel-slid-6" id="tel-6" type="tel" data-validate-field="tel" name="Телефон" placeholder="Телефон*">
                     </label>
-                    <button class="form-modal__btn" type="submit">Заказать консультацию</button>
+                    <button class="button form-modal__btn">Заказать консультацию</button>
                   </form>
                 </div>
               </div>
@@ -574,7 +556,12 @@
       </footer>
     </div>
     <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/slider.min.js"></script>
     <script src="js/modal.min.js"></script>
+    <script src="js/libs/inputmask.min.js"></script>
+    <script src="js/libs/just-validate.min.js"></script>
+    <script src="js/form-slider.min.js"></script>
+    <script src="js/form.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>
